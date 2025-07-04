@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.calculadoraequipo.OperacionController"
+      alignment="CENTER" spacing="15" prefWidth="300" prefHeight="250">
+
+    <TextField fx:id="numero1Field" promptText="Número 1"/>
+    <TextField fx:id="numero2Field" promptText="Número 2"/>
+    <Button text="Calcular" onAction="#calcular"/>
+    <Label fx:id="resultadoLabel" text="Resultado: " style="-fx-font-size: 16;" />
+</VBox>

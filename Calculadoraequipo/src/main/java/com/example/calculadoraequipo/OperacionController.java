@@ -1,3 +1,4 @@
+//Comentario para hacer un commit
 package com.example.calculadoraequipo;
 
 import javafx.fxml.FXML;
@@ -17,6 +18,7 @@ public class OperacionController {
 
     private String operacion;
 
+    // Método para recibir la operación desde el controlador anterior
     public void setOperacion(String operacion) {
         this.operacion = operacion;
     }
@@ -28,15 +30,31 @@ public class OperacionController {
             double num2 = Double.parseDouble(numero2Field.getText());
             double resultado;
 
-            if ("suma".equals(operacion)) {
-                resultado = num1 + num2;
-            } else {
-                resultado = num1 - num2;
+            switch (operacion) {
+                case "suma":
+                    resultado = num1 + num2;
+                    break;
+                case "resta":
+                    resultado = num1 - num2;
+                    break;
+                case "multiplicacion":
+                    resultado = num1 * num2;
+                    break;
+                case "division":
+                    if (num2 == 0) {
+                        resultadoLabel.setText("Error: división entre cero");
+                        return;
+                    }
+                    resultado = num1 / num2;
+                    break;
+                default:
+                    resultadoLabel.setText("Operación no válida");
+                    return;
             }
 
             resultadoLabel.setText("Resultado: " + resultado);
         } catch (NumberFormatException e) {
-            resultadoLabel.setText("Ingresa números válidos");
+            resultadoLabel.setText("Por favor, ingresa números válidos");
         }
     }
 }

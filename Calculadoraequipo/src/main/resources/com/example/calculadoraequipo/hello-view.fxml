@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.calculadoraequipo.HelloController"
+      alignment="CENTER" spacing="20" prefWidth="300" prefHeight="200">
+
+    <Label text="Calculadora" style="-fx-font-size: 20;" />
+    <Button text="Suma" onAction="#onSumaClick" prefWidth="200"/>
+    <Button text="Resta" onAction="#onRestaClick" prefWidth="200"/>
+</VBox>
